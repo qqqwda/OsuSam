@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OsuSam.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +12,7 @@ namespace OsuSam
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new UserPage();
         }
 
         protected override void OnStart()
