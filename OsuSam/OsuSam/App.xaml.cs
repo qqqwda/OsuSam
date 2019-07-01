@@ -8,11 +8,15 @@ namespace OsuSam
 {
     public partial class App : Application
     {
+        public static NavigationPage Navigator { get; internal set; }
+
         public App()
         {
             InitializeComponent();
-
-            MainPage = new UserPage();
+            MainPage = new MasterPage();
+#if DEBUG
+            HotReloader.Current.Start(this);
+#endif
         }
 
         protected override void OnStart()

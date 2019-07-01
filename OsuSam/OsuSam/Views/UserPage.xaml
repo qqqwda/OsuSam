@@ -1,29 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="OsuSam.Views.UserPage">
+             x:Class="OsuSam.Views.UserPage"
+             
+             Title="User Page">
     <ContentPage.Content>
-        <ScrollView>
-            <Grid RowSpacing="0">
+        <ScrollView BackgroundColor="#C64A5F">
+            <Grid RowSpacing="5">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="250"></RowDefinition>
+                    <RowDefinition Height="290"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
                 </Grid.RowDefinitions>
 
 
 
-                <BoxView BackgroundColor="#E1168E" Grid.Row="0"/>
+
+                <BoxView CornerRadius="48" BackgroundColor="#E25F54" HeightRequest="100" Grid.Row="1"/>
+                <BoxView CornerRadius="48" BackgroundColor="#E25F54" Grid.Row="2"/>
+                <BoxView CornerRadius="48" BackgroundColor="#E2546C" Grid.Row="3"/>
+                <BoxView CornerRadius="48" BackgroundColor="#A93F51" Grid.Row="4"/>
 
 
-                <BoxView BackgroundColor="#C6534A" HeightRequest="100" Grid.Row="1"/>
-                <BoxView BackgroundColor="#E25F54" Grid.Row="2">
-                    
-                </BoxView>
-                <BoxView BackgroundColor="#E2546C" Grid.Row="3"/>
-                
-                
                 <!--Profile Name-->
                 <StackLayout Grid.Row="2">
                     <Label 
@@ -37,64 +37,86 @@
 
                 <!--Profile Picture-->
 
-                <BoxView BackgroundColor="Azure" Grid.Row="0" VerticalOptions="End" HorizontalOptions="Center" HeightRequest="100" WidthRequest="100" TranslationY="120"/>
+                <BoxView BackgroundColor="Azure" Grid.Row="1" VerticalOptions="End" HorizontalOptions="Center" HeightRequest="100" WidthRequest="100" TranslationY="20"/>
                 
                 
                 
                 <!--Stats-->
-
-                <Grid Grid.Row="2" TranslationY="60">
+                
+                    <Grid Grid.Row="2" TranslationY="60">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <StackLayout Grid.Column="0" >
+                   
+                        <StackLayout Grid.Column="0" >
                         <Label FontSize="Default" FontAttributes="Bold" Text="Global Ranking" HorizontalOptions="CenterAndExpand"/>
                         <Label FontSize="Default" FontAttributes="Bold" Text="#6574" HorizontalOptions="CenterAndExpand"/>
+                        <Image TranslationY="20" Source="X"></Image>
+                        <Label TranslationY="20" Text="89" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
                     </StackLayout>
                     <StackLayout Grid.Column="1">
                         <Label FontSize="Default" FontAttributes="Bold" Text="National Ranking" HorizontalOptions="CenterAndExpand"/>
                         <Label FontSize="Default" FontAttributes="Bold" Text="#95" HorizontalOptions="CenterAndExpand"/>
-
+                        <Image TranslationY="20" Source="S"></Image>
+                        <Label TranslationY="20" Text="699" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
                     </StackLayout>
                     <StackLayout Grid.Column="2">
                         <Label FontSize="Default" FontAttributes="Bold" Text="Total pp" HorizontalOptions="CenterAndExpand"/>
                         <Label FontSize="Default" FontAttributes="Bold" Text="6746" HorizontalOptions="CenterAndExpand"/>
+                        <Image TranslationY="20" Source="A"></Image>
+                        <Label TranslationY="20" Text="588" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                    
+                </Grid>
+               
+
+                <Grid Grid.Row="3" Padding="20,20,20,20">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+
+
+
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Grid.Column="0">
+                            
+                        <Label VerticalOptions="Center" Text="Ranked Score" TextColor="White"/>
+                        <Label VerticalOptions="Center" Text="Hit Accuracy" TextColor="White"/>
+                        <Label VerticalOptions="Center" Text="Play Count" TextColor="White"/>
+                        <Label  VerticalOptions="Center" Text="Total Score" TextColor="White"/>
+                        <Label VerticalOptions="Center" Text="Total Hits" TextColor="White"/>
+                        <Label VerticalOptions="Center" Text="Maximum Combo" TextColor="White"/>
+                        <Label VerticalOptions="Center" Text="Replays Watched by Others" TextColor="White"/>
+                        </StackLayout>
+
+                        <StackLayout Grid.Column="1">
+
+                            <Label Text="15,218,354,465" TextColor="White" HorizontalOptions="EndAndExpand"/>
+                            <Label Text="98,20%" TextColor="White"  HorizontalOptions="EndAndExpand"/>
+                            <Label Text="74,007" TextColor="White"  HorizontalOptions="EndAndExpand"/>
+                            <Label Text="116,134,323,543" TextColor="White"  HorizontalOptions="EndAndExpand"/>
+                            <Label Text="16,747,354" TextColor="White"  HorizontalOptions="EndAndExpand"/>
+                            <Label Text="4581" TextColor="White"  HorizontalOptions="EndAndExpand"/>
+                            <Label Text="148" TextColor="White" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                    </Grid>
+
+                <!-- Scores Row -->
+                <Grid Grid.Row="4" Padding="20,20,20,20">
+                    
+                    <StackLayout>
+                        <Label Text="Top Scores" TextColor="White" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+                        <BoxView BackgroundColor="Azure" CornerRadius="48"/>
+                        <BoxView BackgroundColor="Azure" CornerRadius="48"/>
+                        <BoxView BackgroundColor="Azure" CornerRadius="48"/>
+                        <BoxView BackgroundColor="Azure" CornerRadius="48"/>
+                        <BoxView BackgroundColor="Azure" CornerRadius="48"/>
+
+
                     </StackLayout>
                 </Grid>
-
-                <Grid Grid.Row="3" Padding="10,5,10,5">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        
-
-
-                    </Grid.ColumnDefinitions>
-                    <StackLayout Grid.Column="0">
-
-                        <Label Text="Ranked Score" TextColor="White"/>
-                        <Label Text="Hit Accuracy" TextColor="White"/>
-                        <Label Text="Play Count" TextColor="White"/>
-                        <Label Text="Total Score" TextColor="White"/>
-                        <Label Text="Total Hits" TextColor="White"/>
-                        <Label Text="Maximum Combo" TextColor="White"/>
-                        <Label Text="Replays Watched by Others" TextColor="White"/>
-                    </StackLayout>
-
-                    <StackLayout Grid.Column="1">
-
-                        <Label Text="15,218,354,465" TextColor="White" FontAttributes="Bold" HorizontalOptions="EndAndExpand"/>
-                        <Label Text="98,20%" TextColor="White" FontAttributes="Bold" HorizontalOptions="EndAndExpand"/>
-                        <Label Text="74,007" TextColor="White" FontAttributes="Bold" HorizontalOptions="EndAndExpand"/>
-                        <Label Text="116,134,323,543" TextColor="White" FontAttributes="Bold" HorizontalOptions="EndAndExpand"/>
-                        <Label Text="16,747,354" TextColor="White" FontAttributes="Bold" HorizontalOptions="EndAndExpand"/>
-                        <Label Text="4581" TextColor="White" FontAttributes="Bold" HorizontalOptions="EndAndExpand"/>
-                        <Label Text="148" TextColor="White" FontAttributes="Bold" HorizontalOptions="EndAndExpand"/>
-                    </StackLayout>
-                </Grid>
-
                 
                 
             </Grid>
